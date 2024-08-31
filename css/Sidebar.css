@@ -1,0 +1,108 @@
+body{
+    background: #eee;
+   }
+   .logo {
+    width: 200px;
+    height: 45px;
+    margin-top: -10px;
+}
+
+   #side_nav{
+    background: #ffffff;
+    min-width: 210px;
+    max-width: 210px;
+    transition: all 0.3s;
+   }
+   .content{
+      min-height: 100vh;
+      width: 100%;
+      background-color: #eeeeee;
+   }
+   hr.h-color{
+     background: #eeeeee;
+   }
+
+   
+   .sidebar li.active{
+      background: #ff7300;
+      border-radius: 5px;
+   }
+   
+   .sidebar li.active a, .sidebar li.active a:hover {
+    color: #ffffff;
+   }
+   .sidebar li a{
+    color: #000000;
+   }
+   .navbar{
+    height: 50px;
+}
+
+   @media(max-width: 767px){
+    #side_nav{
+      margin-left: -250px;
+      position: absolute;
+      min-height: 100vh;
+      z-index: 1;
+    }
+    #side_nav.active{
+      margin-left: 0;
+     }
+   }
+
+   #custom-icon {
+    font-size: 24px; /* Adjust the size as needed */
+}
+a{
+    font-size: 20px;
+    margin-left: 3px;
+}
+li{
+    margin-top: 10px;
+}
+.Register{
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto; /* Center the button horizontally */
+    font-family: Arial, sans-serif; /* Change the font family */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: #ff7300;
+    padding-bottom: 75px;
+    margin-left: 50px;
+}
+.Logout {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto; /* Center the button horizontally */
+    font-family: Arial, sans-serif; /* Change the font family */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    color: #ff7300;
+    padding-bottom: 25px;
+    margin-left: 50px;
+}
+.Register:hover, .Logout:hover {
+    color: #ff3c00 !important; /* Red color on hover */
+}
+
+
+.Register:active,.Logout:active {
+    color: #ff3c0091 !important; /* Lighter grey color when clicked */
+}
+
+#custom-icon {
+    margin-right: 5px; /* Adjust spacing between icon and text */
+}

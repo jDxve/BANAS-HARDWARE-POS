@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.dashboard-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.container {
+  position: fixed; 
+  height: 530px;
+  width: 350px;
+  background: rgb(253, 165, 10);
+  background: linear-gradient(210deg, #f5cba9, #ffcca2, #ffa061, #f58840);
+  top: 15%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 15px;
+  z-index: 9999;
+}
+
+.Logo {
+  margin-top: -1px;
+  margin-left: 5px;
+  width: 300px;
+}
+.Rg {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(233, 85, 0);
+  font: italic small-caps bold 16px/2 cursive;
+  font-size: 25px;
+  animation: breathing 2s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+label {
+  color: white;
+  margin-right: 15px;
+}
+.ip1,
+.ip2,
+.ip3,
+.ip4,
+.ip5 {
+  width: 280px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  border: none;
+}
+.password-toggle {
+  position: relative;
+  display: inline-block;
+}
+
+.password-toggle .toggle-icon {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding-bottom: 16px;
+  padding-right: 5px;
+  z-index: 1;
+}
+
+.password-field {
+  padding-right: 25px;
+}
+
+.password-toggle .toggle-icon i {
+  color: #bd5603;
+}
+
+.password-toggle .password-field {
+  padding-right: 20px;
+}
+.ip5::-webkit-calendar-picker-indicator {
+  margin-right: 5px;
+}
+input[type="date"]:invalid::-webkit-datetime-edit {
+  color: #787777;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-image: url("../image/calendar.png");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 4px;
+  color: #037b86;
+}
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+}
+.gen {
+  font-weight: 18px;
+}
+.radio {
+  padding-top: 15px;
+  text-align: center;
+  margin-left: 15px;
+}
+.rd {
+  outline: none;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 18px;
+}
+
+.rd2 {
+  padding-left: 15px;
+  outline: none;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 18px;
+}
+
+.country {
+  outline: none;
+  border: none;
+  margin-left: 2px;
+  width: 143px;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 12px;
+}
+.interest {
+  outline: none;
+  border: none;
+  width: 143px;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 35px;
+}
+.register {
+  border: none;
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  background-color: #ef5407;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  font-family: cursive;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.register:active {
+  transform: scale(0.95);
+}
+.container-fluid {
+  position: relative;
+}
+.maininfo {
+  display: none;
+  border: 2px solid #fff;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 701px;
+  width: 350px;
+  background: rgba(255, 255, 255, 0.616);
+  text-align: center;
+  border-radius: 15px;
+  margin-top: -350px;
+  z-index: 999;
+}
+.info {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  width: 320px;
+  background: rgb(212, 104, 32);
+  background: linear-gradient(
+    0deg,
+    rgb(212, 155, 32) 0%,
+    rgb(206, 122, 26) 13%,
+    rgb(198, 114, 19) 20%,
+    rgb(187, 84, 16) 26%,
+    rgb(162, 93, 2) 34%,
+    rgb(164, 91, 7) 100%
+  );
+
+  text-align: center;
+  border-radius: 15px;
+  z-index: 999;
+}
+
+.close {
+  color: rgb(66, 240, 214);
+  float: right;
+  margin-right: 8px;
+  font-size: 25px;
+  font-weight: 5px;
+  margin-top: -5px;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  cursor: pointer;
+}
+.Rg2div {
+  margin-left: 10px;
+}
+.Rg2 {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 25px;
+  color: aliceblue;
+  font: italic small-caps bold 20px/2 cursive;
+}
+p {
+  font-family: Tahoma, sans-serif;
+  color: aliceblue;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.carimg {
+  float: right;
+  margin-right: -10px;
+}
+.logo2 {
+  margin-top: -30px;
+  text-align: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.btn-close {
+  width: 5px;
+  height: 5px;
+  margin-left: 315px;
+}
+.btn-close:focus {
+  border-color: none;
+  box-shadow: none; /* Adjust the color and other properties as needed */
+}
+
+

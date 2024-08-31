@@ -1,0 +1,695 @@
+.container-header {
+  position: relative;
+  height: 4rem;
+  background-color: white;
+}
+body {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.pos-text {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  top: 1rem;
+}
+
+.search {
+  position: relative;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: 35.8%;
+  margin-top: -2rem;
+  border-radius: 5px;
+  background-color: #e8e8e8;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  height: 2.1rem;
+}
+input.search::placeholder {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pos-text {
+    margin-left: 1%;
+  }
+
+  .search {
+    width: 30%;
+    margin-right: 1%;
+  }
+}
+
+@media (max-width: 480px) {
+  .pos-text {
+    margin-left: 0.5%;
+  }
+
+  .search {
+    width: 40%;
+    margin-right: 0.5%;
+  }
+}
+.POS-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.category-buttons {
+  margin-left: 1.4rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 0;
+}
+
+.button {
+  font-weight: 500;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px 32px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .button {
+    width: calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .button {
+    width: calc(50% - 10px);
+  }
+}
+
+.button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button.active {
+  background-color: #ff6600;
+  color: #fff;
+}
+.category-list-container {
+  margin-left: 1.4rem;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  width: 61.8%;
+  height: 80vh; /* Adjusted height using viewport height */
+  overflow-y: auto;
+}
+
+@media (max-width: 1200px) {
+  /* Adjust this breakpoint for larger screens if needed */
+  .category-list-container {
+    margin-top: 2rem;
+    width: 90%; /* Adjust this value as needed */
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-list-container {
+    margin-top: 2rem;
+    width: 90%;
+    max-width: none;
+    height: 40%;
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-list-container {
+    margin-top: 2rem;
+    width: 95%;
+    height: 50%;
+  }
+}
+
+.add-to-pending {
+  background-color: #fb6900;
+  border: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 30px;
+  margin-left: -40px;
+}
+
+.add-to-pending:hover {
+  background-color: #c04116;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  height: 25%;
+  font-family: "Roboto", sans-serif;
+}
+.input-container {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
+#additionalInfo {
+  width: 75%;
+  height: 2.3rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #000000;
+  outline: none;
+}
+
+#saveBtn {
+  height: 2.3rem;
+  top: 0;
+  right: 0;
+  width: 20%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #ff6600;
+  color: #ffffff;
+}
+#productInfo {
+  font-size: 18px;
+}
+
+.close {
+  margin-top: -10px;
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  margin-right: -3%; /* Adjust the margin based on your layout */
+}
+
+/* Adjust the close button position for smaller screens */
+@media screen and (max-width: 768px) {
+  .close {
+    margin-right: 5%; /* Adjust the margin for smaller screens */
+  }
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.total-amount {
+  margin-top: 0rem;
+  background-color: #ffffff;
+  height: 7rem;
+  width: 28rem;
+  margin-left: 1.4rem;
+}
+
+.total-header {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  margin-left: 1.3rem;
+  margin-top: 1rem;
+}
+
+.cancel-btn,
+.proceed-btn {
+  width: 35%;
+  height: 2rem;
+  margin-top: 5%;
+  border-radius: 5px;
+}
+
+.cancel-btn {
+  background-color: #fff;
+  margin-left: 10%;
+  border: 2px solid #ff6600;
+}
+
+.cancel-btn:hover {
+  background-color: #ffcccc;
+}
+
+.proceed-btn {
+  color: #ffffff;
+  margin-left: 7%;
+  background-color: #ff6600;
+  border: none;
+}
+
+#totalAmount {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  color: #333;
+  font-weight: 500;
+  margin-top: -1.7rem;
+  margin-left: 75%;
+}
+
+.pending-purchases-content {
+  display: flex;
+  flex-direction: column;
+  margin-right: -60rem;
+  margin-left: -1.5rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .pending-purchases-content {
+    width: 40%;
+  }
+}
+
+.pending-table th {
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.pending-table td {
+  padding: 0.75rem;
+}
+
+.scrollable-content {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+@media only screen and (max-width: 768px) {
+  .total-amount {
+    left: 2%;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #totalAmount {
+    margin-left: 78%;
+  }
+  .cancel-btn,
+  .proceed-btn {
+    width: 30%;
+    margin-left: 15%;
+  }
+}
+.pending-purchases {
+  margin-top: -2.7rem;
+  height: 29.8rem;
+  max-height: 45.9rem;
+  width: 28rem;
+  margin-left: 1.4rem;
+  background-color: #ffffff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow-y: auto;
+}
+@media only screen and (max-width: 768px) {
+  .pending-purchases {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+  }
+}
+.pending-text-header {
+  font-family: "Roboto", sans-serif;
+  font-size: 23px;
+  color: #ff6600;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.pending-table {
+  font-family: "Roboto", sans-serif;
+  margin-left: 0.6rem;
+  margin-top: 1.5rem;
+  font-size: 15px;
+  color: #333;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+.pending-purchases {
+  border-collapse: collapse;
+}
+
+.pending-purchases th {
+  padding: 8px;
+  text-align: left;
+}
+
+.pending-purchases td {
+  padding: 8px;
+}
+
+.pending-purchases tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.amount-payable {
+  width: 50%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  height: 80%;
+  overflow-y: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close {
+  width: 10px;
+  margin-left: 420px;
+  margin-top: -20px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.amount-payable {
+  height: 80%;
+  width: 35%;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.amount-payable {
+  flex-direction: column;
+}
+
+.lists-amount {
+  overflow-y: auto;
+  height: 60%;
+  background-color: #ffffff;
+  margin: 1rem;
+  border-radius: 5px;
+  width: 93%;
+}
+
+.customer-money-container {
+  width: 93%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+
+.customer-money-label {
+  margin-top: 2rem;
+}
+.customer-money-label {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+}
+
+.input-button-container {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.customer-money {
+  width: calc(65% - 0.5rem);
+  margin-right: 0.5rem;
+  margin-left: 2rem;
+  border-radius: 5px;
+  height: 2.3rem;
+  border: 1px solid #000000;
+  outline: none;
+}
+
+#payButton {
+  height: 2.3rem;
+  width: 22%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #ff6600;
+  color: #ffffff;
+}
+.total-amount-text {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+#changeContainer {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.lists-amount p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin-left: 2rem;
+}
+.lists-amount table {
+  margin-left: 2rem;
+  width: 93%;
+  border-collapse: collapse;
+}
+
+.lists-amount td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lists-amount td:first-child {
+  width: 20%;
+}
+
+.lists-amount tr:last-child td {
+  border-bottom: none;
+}
+.done-btn {
+  border-radius: 5px;
+  height: 2.3rem;
+  margin-top: 1rem;
+  width: 93%;
+  outline: none;
+  border: none;
+  background-color: #ff6600;
+  color: #ffffff;
+}
+#receiptModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.receipt-container {
+  background-color: #fefefe;
+  margin: 5.3% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  height: 80%;
+  width: 35%; /* Set the width of the modal */
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  overflow: auto;
+}
+
+.receipt-container .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.receipt-container .close:hover,
+.receipt-container .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.receipt-details {
+  font-family: "Roboto", sans-serif;
+}
+.receipt-header {
+  background-color: #f6600f;
+  text-align: center;
+  font-size: 25px;
+  color: #ffffff;
+  padding: 8px;
+}
+.store-name,
+.store-address {
+  font-size: 15px;
+}
+.store-name {
+  margin-top: 3rem;
+}
+.receipt-table {
+  font-family: "Roboto", sans-serif;
+  margin-left: 1.5rem;
+  margin-top: 2rem;
+  font-size: 15px;
+  color: #333;
+  border-collapse: collapse;
+  width: 90%;
+}
+.total-amount-receipt {
+  margin-top: 15rem;
+}
+.total-amount-receipt,
+.amount-received-receipt,
+.change-receipt,
+.transaction-id {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+.print-btn,
+.new-btn {
+  margin-top: 4rem;
+  width: 35%;
+  height: 2rem;
+  border-radius: 5px;
+}
+.print-btn {
+  margin-left: 3.5rem;
+  color: #ffffff;
+  background-color: #f6600f;
+  border: none;
+}
+.new-btn {
+  margin-left: 2rem;
+  color: #ffffff;
+  background-color: #ff6600;
+  border: none;
+}
+.receipt-table th {
+  background-color: #e8e8e8;
+}
+
+@media print {
+  .print-btn,
+  .new-btn {
+    display: none;
+  }
+
+  #receiptModal {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background-color: #fff;
+  }
+
+  .receipt-container {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .receipt-header {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .store-name,
+  .store-address {
+    font-size: 12px;
+  }
+
+  .receipt-table th {
+    background-color: #fff;
+    color: #000;
+  }
+}
+.category-list {
+  display: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  width: 100%;
+}
+#receiptModal {
+  overflow: hidden;
+}
+#proceedModal {
+  height: 100%;
+  overflow: hidden;
+}
+
+.receipt-table th {
+  padding: 8px 20px; /* Adjust the padding as needed */
+}
+
+.receipt-table td {
+  padding: 8px 20px; /* Adjust the padding as needed */
+}
+
+.thead {
+  position: sticky;
+  top: 0;
+  background-color: #f58300; /* Optional: Adjust background color as needed */
+}
+
+.thead2 {
+  text-align: center;
+  background-color: #ff5656;
+}
+.search {
+  text-indent: 10px; /* Adjust the value as needed */
+}

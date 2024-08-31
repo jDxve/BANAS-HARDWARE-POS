@@ -1,0 +1,304 @@
+body{
+    overflow-y: hidden;
+}
+
+.fs{
+    color: orangered;
+    font-family: "Arial", sans-serif; 
+    font-weight: bolder;
+    font-size: 28px;
+}
+h2.fs-5 {
+    font-size: 20px; /* Change to your desired font size */
+}
+.container1 {
+    width: 100%; /* Full width of the parent element (in this case, the body) */
+    border-radius: 10px;
+    height: 80lvh;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+    padding: 0; /* Remove default padding */
+    bottom: 0; /* Align the container to the bottom */
+    margin-top: -5px;
+}
+.container-sm {
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    display: flex; /* Add flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    border-radius: 5px;
+    margin-right: 0%;
+    margin-top: -35px;
+    margin-right: 2px;
+    margin-bottom: 25px;
+
+}
+#currentDate{
+    margin-top: 15px;
+    margin-left: 8px;
+}
+
+.col-auto{
+    margin-left: 20px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+.align-items-center
+{
+    margin-top: 25px;
+}
+.col-auto{
+    margin-left: 20px;
+}
+.st{
+    margin-top: -35px;
+    font-family: "Arial", sans-serif; 
+    font-weight: bolder;
+    font-size: 25px;
+}
+#searchIcon{
+    position: absolute;
+    margin-left: 10px;
+}
+.form-control{
+    width: 375px;
+    padding-left: 31px;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: orangered;
+  }
+@media (max-width: 768px) {
+    .form-control {
+        width: 200px; /* Adjust the width for smaller screens */
+    }
+}
+
+.thead{
+    background-color: rgb(252, 165, 93);
+    border-radius: 10px;
+    color: rgba(65, 56, 56, 0.89);
+    border-bottom: none;
+    border-bottom: none;
+    position: sticky;
+    top: 0; /* Change this to your desired background color */
+}
+
+    .table-wrapper {
+        height: 430px;
+        overflow-y: auto;
+    }
+    @media screen and (min-height: 800px) {
+        .table-wrapper {
+            height: 555px; 
+            overflow-y: auto;
+        }
+    }
+    
+    @media screen and (min-height: 1000px) {
+        .table-wrapper {
+            height: 800px; 
+            overflow-y: auto;
+        }
+    }
+.table-wrapper::-webkit-scrollbar {
+    width: 0.1px; /* Width of the scrollbar for webkit browsers (Chrome/Safari) */
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+    background-color: none; /* Color of the scrollbar thumb */
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+    background-color: #fff; /* Color of the scrollbar track */
+}
+#Table-stocks {
+    width: 95%;
+    margin: 0 auto; /* Center horizontally */
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.row-highlight {
+    background-color: #f5cba9;
+    font-weight: 600;
+  }
+  .noPro{
+    background-color: #f5a9a9;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .ProductList{
+    font-weight: 600;
+  }
+  .btn{
+    font-size: medium;
+}
+.btn:active{
+    box-shadow: none;
+}
+#print,
+#restart{
+    background-color: orangered;
+    color: white;
+    margin-right: 5px;
+    font-family: "Arial", sans-serif; 
+    font-weight: 20px;
+    height: 37px;
+    margin-right: -0.5px;
+    margin-left: 12px;
+}
+#print:hover,
+#restart:hover {
+    background-color: rgb(248, 95, 34);
+    color: white;
+}
+#print:focus,
+#restart:focus {
+    box-shadow: none;
+    outline: none; /* Remove default outline */
+    background-color: rgb(248, 70, 0);
+}
+#print:active,
+#restart:active {
+    transform: scale(0.95);
+    box-shadow: none;
+    border: none; /* Remove default outline */
+    color: rgb(255, 255, 255);/* Set the background color to orange when button is active (clicked) */
+}
+
+
+
+
+@media (max-width: 768px) {
+    .st {
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 576px) {
+    .st {
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+}
+.fa{
+    font-weight: 100;
+}
+
+.Dateindi{
+    margin-left: -160px;
+    font-weight: 400;
+    color: orangered;
+}
+.fa-calendar{
+    margin-left: 15px;
+    margin-right: -3px;
+}
+
+
+
+
+.delete-modal {
+    width: 70%; /* Set width to 70% of the viewport width */
+    max-width: 350px; /* Limit maximum width to 350px */
+    height: 150px;
+    background: linear-gradient(210deg, #f5cba9, #ffcca2, #ffa061, #f58840);
+    text-align: center;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .delete-modal {
+        width: 80%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delete-modal {
+        width: 90%; /* Adjust width for even smaller screens */
+        max-width: none; /* Remove max-width constraint */
+    }
+}
+
+#btnCancel,
+#btnConfirm{
+    background-color: orangered;
+    color: white;
+    margin-right: 5px;
+    font-family: "Arial", sans-serif; 
+    font-weight: 20px;
+    height: 37px;
+    width: 100px;
+}
+@media (max-width: 768px) {
+    #btnCancel,
+    #btnConfirm {
+        width: 25%;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+}
+.ConfirmP{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+    color: rgb(102, 0, 0);
+}
+.Dateindi{
+    margin-left: -130px;
+    font-weight: 400;
+    color: orangered;
+}
+.fa-calendar{
+    margin-left:20px;
+    margin-right: -3px;
+}
+#currentDate{
+    margin-right: -110px;
+}
+
+.modal-overlay2,
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.337); /* semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+}
+
+@media (max-width: 768px) {
+    .modal-overlay2,
+    .modal-overlay {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+}
+  
+
+
+
