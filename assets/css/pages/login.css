@@ -1,0 +1,63 @@
+body.login-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, var(--ink-900), #3a2a1f 60%, var(--brand-600));
+    padding: var(--space-4);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-7) var(--space-6);
+    text-align: center;
+}
+
+.login-logo {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin: 0 auto var(--space-4);
+}
+
+.login-card h1 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-1);
+}
+
+.login-subtitle {
+    color: var(--ink-500);
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-6);
+}
+
+.login-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.password-field-wrap {
+    position: relative;
+}
+.password-field-wrap .input {
+    padding-right: 44px;
+}
+.password-toggle {
+    position: absolute;
+    right: var(--space-2);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink-500);
+    padding: var(--space-1);
+    display: flex;
+}
+.password-toggle:hover { color: var(--ink-900); }
